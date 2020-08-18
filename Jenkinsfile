@@ -36,7 +36,8 @@ pipeline {
          sh """
           sudo scp -i /home/ec2-user/hemant_kamat.pem -o StrictHostKeyChecking=no -r /home/ec2-user/ ec2-user@ec2-3-95-208-69.compute-1.amazonaws.com:~
           sudo chmod 400 /home/ec2-user/hemant_kamat.pem
-          ssh -i /home/ec2-user/hemant_kamat.pem ec2-user@ec2-3-95-208-69.compute-1.amazonaws.com
+          echo "done"
+          sudo ssh -i /home/ec2-user/hemant_kamat.pem ec2-user@ec2-3-95-208-69.compute-1.amazonaws.com
           ls
           """
         }
