@@ -38,7 +38,11 @@ pipeline {
           sudo chmod 400 /home/ec2-user/hemant_kamat.pem
           echo "done"
           sudo ssh -i /home/ec2-user/hemant_kamat.pem ec2-user@ec2-3-95-208-69.compute-1.amazonaws.com
-          python3 hello.py
+          PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
+          python3 -m venv myvenv
+          source myvenv/bin/activate
+          pip install -r requirements.txt
+          ./myvenv/bin/python3 hello.py
           """
         }
       }
