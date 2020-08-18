@@ -10,7 +10,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH && python3 -m venv myvenv && source myenv/bin/activate && pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME '
+        sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH && python3 -m venv myvenv && source myvenv/bin/activate && pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME '
       }
     }
 
