@@ -31,4 +31,11 @@ pipeline {
     }
 
   }
+  stage('deploy') {
+      steps {
+        sh 'ssh ec2-user@3.95.208.69'
+      }
+    }
+
+  }
 }
