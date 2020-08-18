@@ -34,7 +34,7 @@ pipeline {
      steps {
         script {
          sh """
-          sudo scp -i /home/ec2-user/hemant_kamat.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/Pipeline/  ec2-3-95-208-69.compute-1.amazonaws.com/home/ec2-user
+          sudo scp -i /home/ec2-user/hemant_kamat.pem -o StrictHostKeyChecking=no -r /home/ec2-user/  ec2-3-95-208-69.compute-1.amazonaws.com/home/ec2-user
           """
         }
       }
