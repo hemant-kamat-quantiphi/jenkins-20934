@@ -10,7 +10,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'python3 -m venv myvenv && source myvenv/bin/activate && pip3 install -r requirements.txt && pip3 install --user pylint '
+        sh 'python3 -m venv myvenv && source myvenv/bin/activate && pip3 install -r requirements.txt '
       }
     }
 
@@ -18,7 +18,7 @@ pipeline {
       steps {
         script {
           sh """
-          pylint test.py
+          pylint --h
           """
         }
       }
