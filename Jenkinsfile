@@ -18,7 +18,7 @@ pipeline {
      steps {
         script {
          sh """
-          ./myvenv/bin/pylint *.py
+          ./myvenv/bin/pylint test.py
           """
         }
       }
