@@ -10,7 +10,12 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'python3 -m venv myvenv && source myvenv/bin/activate && sudo pip3 install -r requirements.txt '
+        sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
+if [ ! -d "venv" ]; then
+        virtualenv venv
+fi
+. venv/bin/activate
+pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME '
       }
     }
 
