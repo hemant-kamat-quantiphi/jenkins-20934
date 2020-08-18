@@ -30,12 +30,16 @@ pipeline {
       }
     }
 
-  }
-  stage('deploy') {
-      steps {
-        sh 'ssh ec2-user@3.95.208.69'
+  stage('Deploy') { // Run pylint against your code
+     steps {
+        script {
+         sh """
+          ssh ec2-user@3.95.208.69
+          """
+        }
       }
-    }
+   }
+  
 
   }
 }
