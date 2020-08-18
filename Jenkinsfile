@@ -34,7 +34,7 @@ pipeline {
      steps {
         script {
          sh """
-          ssh ec2-user@3.95.208.69
+          sudo scp -i /home/ec2-user/server-jenkins.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/Pipeline/  ec2-3-95-208-69.compute-1.amazonaws.com:~
           """
         }
       }
