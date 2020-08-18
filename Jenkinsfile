@@ -14,15 +14,15 @@ pipeline {
       }
     }
 
-  //  stage('Linting') { // Run pylint against your code
-   //  steps {
-      //  script {
-    //     sh """
-       //   pylint --h
-      //    """
-      //  }
-     // }
-   // }
+    stage('Linting') { // Run pylint against your code
+     steps {
+        script {
+         sh """
+          ./myvenv/bin/pylint *.py
+          """
+        }
+      }
+   }
 
     stage('test') {
       steps {
