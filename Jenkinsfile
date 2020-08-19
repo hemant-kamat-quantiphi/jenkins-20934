@@ -42,7 +42,7 @@ pipeline {
      steps {
         script {
          sh """
-          sudo scp -i /home/ec2-user/hemant_kamat.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/20934-jenkins ec2-user@ec2-54-167-215-55.compute-1.amazonaws.com:~
+          sudo scp -i /home/ec2-user/hemant_kamat.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/20934-jenkins ec2-user@ec2-100-27-13-176.compute-1.amazonaws.com:~
           sudo chmod 400 /home/ec2-user/hemant_kamat.pem
           echo "done"
           sudo ssh -i /home/ec2-user/hemant_kamat.pem ec2-54-167-215-55.compute-1.amazonaws.com
