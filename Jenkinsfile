@@ -1,6 +1,12 @@
 pipeline {
   agent any
   stages {
+    
+    stage('Cleanup') { // Cleanup
+      steps {
+        cleanWs()
+      }
+    }
 
     stage('Checkout') { // Checkout (git clone ...) the projects repository
       steps {
