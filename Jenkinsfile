@@ -3,9 +3,9 @@ pipeline {
   stages {
     
     stage('Cleanup') { // Cleanup
-      steps {
+      
         step[$class: 'WsCleanup']
-      }
+      
     }
 
     stage('Checkout') { // Checkout (git clone ...) the projects repository
