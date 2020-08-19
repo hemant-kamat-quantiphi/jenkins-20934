@@ -4,7 +4,9 @@ pipeline {
     
     stage('Cleanup') { // Cleanup
       
-        step[$class: 'WsCleanup']
+      steps{
+         preBuildCleanup()
+      }
       
     }
 
