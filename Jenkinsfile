@@ -5,7 +5,7 @@ pipeline {
     stage('Cleanup') { // Cleanup
       
       steps{
-         preBuildCleanup()
+         cleanWs()
       }
       
     }
