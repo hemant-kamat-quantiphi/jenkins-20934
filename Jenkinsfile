@@ -4,7 +4,7 @@ pipeline {
     
     stage('Cleanup') { // Cleanup
       steps {
-        [$class: 'WsCleanup']
+        step[$class: 'WsCleanup']
       }
     }
 
